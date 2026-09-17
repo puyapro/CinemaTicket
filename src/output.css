@@ -323,7 +323,7 @@
 }
 @font-face {
   font-family: Dana;
-  src: url("./assets/fonts/DanaVF.woff2");
+  src: url("./fonts/DanaVF.woff2");
 }
 .container {
   width: min(100% - 8px, 2000px);
