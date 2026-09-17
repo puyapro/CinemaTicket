@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: Dana;
+    src: url("./assets/fonts/DanaVF.woff2");
+}
+
+.container {
+    width: min(100% - 8px, 2000px);
+    margin-inline: auto;
+}
+
+.btn {
+    @apply flex gap-1 p-2 hover:bg-zinc-200 rounded-sm;
+}
+
+.search-input {
+    @apply outline-none bg-zinc-100 focus:bg-zinc-200 focus:ring-1 rounded-sm px-3 p-1;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: 30px !important;
+    height: 30px !important;
+    border-radius: 50% !important;
+    background: rgba(0, 0, 0, 0.55) !important;
+    color: white !important;
+    backdrop-filter: blur(8px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    color: white !important;
+    font-size: 14px !important;
+}
+
+.swiper-pagination-bullet {
+    background: white !important;
+    opacity: 0.5 !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: white !important;
+    opacity: 1 !important;
+}
+
+body {
+    font-family: Dana;
+}
