@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <title>سینماتیکت</title>
+    <link rel="icon" href="https://cinematicket.org/assets/images/logo.png">
+</head>
+
+<body>
+
+    <header class="w-full scale-85 flex m-1 mt-2 justify-between items-center border-b-1 border-b-zinc-300">
+        <div class="flex p-1 justify-between gap-5">
+            <div class="gap-0 flex">
+                <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-10">
+                <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-33">
+            </div>
+            <a href="#" class="btn"><i data-lucide="popcorn"></i>
+                سینما ها
+            </a>
+            <input type="text" class="search-input text-sm w-100" placeholder="جست و جوی سینما، فیلم و...">
+        </div>
+        <div class="">
+            <a href="#" class="btn"><i data-lucide="circle-user-round"></i>
+                ورود یا ثبت نام
+            </a>
+        </div>
+    </header>
+
+    <div class="swiper mySwiper w-[85%] overflow-hidden rounded-2xl">
+        <div class="swiper-wrapper">
+            <!-- Slide 1 -->
+            <div class="swiper-slide relative">
+                <img src="https://static.cdn.asset.cinematicket.org/media/cache/3d/12/3d12fe40bfdb3f7c7d3eb82f0a6c0e8c.webp"
+                    class="w-full block">
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
+                </div>
+                <div class="absolute right-10 bottom-10 z-10 w-80 text-right text-white">
+                    <span class="text-sm text-white/60">فیلم سینمایی</span>
+
+                    <h2 class="mt-2 text-4xl font-bold">
+                        عنوان فیلم
+                    </h2>
+                    <p class="mt-3 text-sm leading-7 text-white/70">
+                        توضیح فیلم
+                    </p>
+                    <button class="mt-5 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black">
+                        مشاهده فیلم
+                    </button>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="swiper-slide relative">
+                <img src="https://static.cdn.asset.cinematicket.org/media/cache/f3/7d/f37de8cddaef4fb453dc9155fc632d57.webp"
+                    class="w-full block">
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
+                </div>
+                <div class="absolute right-10 bottom-10 z-10 w-80 text-right text-white">
+                    <span class="text-sm text-white/60">فیلم سینمایی</span>
+                    <h2 class="mt-2 text-4xl font-bold">
+                        عنوان فیلم
+                    </h2>
+                    <p class="mt-3 text-sm leading-7 text-white/70">
+                        توضیح فیلم
+                    </p>
+                    <button class="mt-5 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black">
+                        مشاهده فیلم
+                    </button>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="swiper-slide relative">
+                <img src="https://static.cdn.asset.cinematicket.org/media/cache/39/59/395971d9002e2b68fea2cd75d548b044.webp"
+                    class="w-full block">
+                <div
+                    class="absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
+                </div>
+                <div class="absolute right-10 bottom-10 z-10 w-80 text-right text-white">
+                    <span class="text-sm text-white/60">فیلم سینمایی</span>
+                    <h2 class="mt-2 text-4xl font-bold">
+                        عنوان فیلم
+                    </h2>
+                    <p class="mt-3 text-sm leading-7 text-white/70">
+                        توضیح فیلم
+                    </p>
+                    <button class="mt-5 rounded-lg bg-white px-5 py-2.5 text-sm font-semibold text-black">
+                        مشاهده فیلم
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>lucide.createIcons();</script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script>
+        new Swiper(".mySwiper", {
+            loop: true,
+
+            autoplay: {
+                delay: 4000,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+
+            direction: "horizontal",
+        })
+    </script>
+
+
+</body>
+
+</html>
