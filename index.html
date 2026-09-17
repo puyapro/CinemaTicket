@@ -18,28 +18,29 @@
                 <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-10">
                 <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-33">
             </div>
-            <a href="#" class="btn"><i data-lucide="popcorn"></i>
+            <a href="#" class="!hidden md:!flex btn"><i data-lucide="popcorn"></i>
                 سینما ها
             </a>
-            <input type="text" class="search-input text-sm w-100" placeholder="جست و جوی سینما، فیلم و...">
+            <input type="text" class="hidden lg:block search-input text-sm w-100"
+                placeholder="جست و جوی سینما، فیلم و...">
         </div>
         <div class="">
-            <a href="#" class="btn"><i data-lucide="circle-user-round"></i>
+            <a href="#" class="!hidden md:!flex btn"><i data-lucide="circle-user-round"></i>
                 ورود یا ثبت نام
             </a>
         </div>
     </header>
 
-    <div class="swiper mySwiper w-[85%] overflow-hidden rounded-2xl">
+    <div class="swiper mySwiper md:w-[85%] overflow-hidden md:rounded-2xl mx-auto">
         <div class="swiper-wrapper">
             <!-- Slide 1 -->
             <div class="swiper-slide relative">
                 <img src="https://static.cdn.asset.cinematicket.org/media/cache/3d/12/3d12fe40bfdb3f7c7d3eb82f0a6c0e8c.webp"
                     class="w-full block">
                 <div
-                    class="absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
+                    class="hidden md:block absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
                 </div>
-                <div class="absolute right-10 bottom-10 z-10 w-80 text-right text-white">
+                <div class="hidden md:block absolute right-10 bottom-10 z-10 w-80 text-right text-white">
                     <span class="text-sm text-white/60">فیلم سینمایی</span>
 
                     <h2 class="mt-2 text-4xl font-bold">
@@ -58,9 +59,9 @@
                 <img src="https://static.cdn.asset.cinematicket.org/media/cache/f3/7d/f37de8cddaef4fb453dc9155fc632d57.webp"
                     class="w-full block">
                 <div
-                    class="absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
+                    class="hidden md:block absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
                 </div>
-                <div class="absolute right-10 bottom-10 z-10 w-80 text-right text-white">
+                <div class="hidden md:block absolute right-10 bottom-10 z-10 w-80 text-right text-white">
                     <span class="text-sm text-white/60">فیلم سینمایی</span>
                     <h2 class="mt-2 text-4xl font-bold">
                         عنوان فیلم
@@ -78,9 +79,9 @@
                 <img src="https://static.cdn.asset.cinematicket.org/media/cache/39/59/395971d9002e2b68fea2cd75d548b044.webp"
                     class="w-full block">
                 <div
-                    class="absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
+                    class="hidden md:block absolute inset-0 bg-[linear-gradient(to_left,rgba(0,0,0,.9),rgba(0,0,0,.35)_45%,transparent_80%)]">
                 </div>
-                <div class="absolute right-10 bottom-10 z-10 w-80 text-right text-white">
+                <div class="hidden md:block absolute right-10 bottom-10 z-10 w-80 text-right text-white">
                     <span class="text-sm text-white/60">فیلم سینمایی</span>
                     <h2 class="mt-2 text-4xl font-bold">
                         عنوان فیلم
@@ -94,9 +95,9 @@
                 </div>
             </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev hidden sm:block"></div>
+        <div class="swiper-button-next hidden sm:block"></div>
+        <div class="swiper-pagination hidden sm:block"></div>
     </div>
 
 
