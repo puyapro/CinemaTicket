@@ -25,11 +25,7 @@
 }
 
 .section {
-    @apply my-2 -mt-8 md:mt-7 scale-85;
-}
-
-.section h3 {
-    @apply font-bold text-2xl;
+    @apply my-2 mt-7 md:mt-7 scale-85 font-bold text-2xl p-2 rounded-sm;
 }
 
 .section nav {
