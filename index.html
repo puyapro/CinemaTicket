@@ -10,12 +10,13 @@
     <link rel="icon" href="https://cinematicket.org/assets/images/logo.png">
 </head>
 
-<body>
+<body id="body">
 
     <!-- header -->
-    <header class="w-full pb-2 scale-85 flex m-1 mt-2 justify-between items-center border-b-1 border-b-zinc-300">
+    <header
+        class="hidden md:flex w-full pb-2 scale-85 m-1 mt-2 justify-between items-center border-b-1 border-b-zinc-300">
         <div class="flex md:gap-15">
-            <div class="gap-0 flex w-screen justify-center md:w-auto h-auto">
+            <div class="flex gap-0 w-screen justify-center md:w-auto h-auto">
                 <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-auto">
                 <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-auto">
             </div>
@@ -33,6 +34,28 @@
             </a>
         </div>
     </header>
+
+    <!-- responsive menu -->
+    <header
+        class="md:!hidden flex w-full pb-2 scale-85 m-1 mt-2 justify-between items-center border-b-1 border-b-zinc-300">
+        <div class="flex gap-0 justify-center md:w-auto h-auto">
+            <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-auto">
+            <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-auto">
+        </div>
+        <div class="">
+            <button onclick="toggleMenu()" class="btn !p-0 !p-2"><i data-lucide="menu"></i></button>
+        </div>
+    </header>
+    <div onclick="toggleMenu()" id="bg-responsive"
+        class="hidden inset-0 absolute z-2 h-screen w-full bg-zinc-950/70 backdrop-blur-xs"></div>
+    <menu id="menu" class="hidden top-0 right-0 z-3 absolute h-screen w-2/3 bg-white text-black p-8 pt-5">
+        <div class="flex gap-0 justify-center md:w-auto h-auto border-b-1 border-zinc-500 mb-5 pb-2">
+            <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-auto">
+            <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-auto">
+        </div>
+        <a href="#" class="btn !justify-start"><i data-lucide="popcorn"></i> سینما ها</a>
+        <a href="#" class="btn !justify-start"><i data-lucide="circle-user-round"></i> ورود یا ثبت نام</a>
+    </menu>
 
     <!-- carousel -->
     <div class="swiper mySwiper md:w-[85%] overflow-hidden md:rounded-2xl mx-auto my-2">
@@ -108,7 +131,7 @@
     <div class="section !rounded-3xl w-full h-90 !flex !p-0 overflow-hidden items-center">
         <img src="https://static.cdn.asset.cinematicket.org/media/cache/3d/12/3d12fe40bfdb3f7c7d3eb82f0a6c0e8c.webp"
             alt="" class="relative !object-cover w-full h-full blur-sm">
-        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="absolute inset-0 bg-black/70"></div>
         <img src="https://static.cdn.asset.cinematicket.org/media/cache/b9/1c/b91ce6dd49d1e04af9fe2e930a4d92ad.webp"
             alt="" class="absolute ms-5 rounded-lg object-cover w-50 h-80">
         <div class="absolute !flex !flex-col text-white text-lg ms-60 !gap-10">
@@ -138,9 +161,10 @@
 
     <!-- movies list -->
     <section class="section !-mt-7">
-        <nav>
+        <nav class="flex items-center">
             <h3 class="">فیلم های ایرانی</h3>
-            <a href="#" class="!hidden md:!flex btn">مشاهده همه <i data-lucide="chevron-left"></i></a>
+            <a href="#" class="!hidden md:!flex btn font-normal text-base">مشاهده همه <i
+                    data-lucide="chevron-left"></i></a>
         </nav>
         <div>
             <article class="relative overflow-hidden rounded-xl">
@@ -226,6 +250,29 @@
 
             direction: "horizontal",
         })
+    </script>
+    <script>
+        function toggleMenu() {
+            const bg = document.querySelector("#bg-responsive");
+            const menu = document.querySelector("#menu");
+            const body = document.querySelector("#body");
+
+            const isOpen = !menu.classList.contains("hidden");
+
+            if (isOpen) {
+                bg.classList.add("hidden");
+                bg.classList.remove("block");
+                menu.classList.add("hidden");
+                menu.classList.remove("block");
+                body.classList.remove("overflow-hidden");
+            } else {
+                bg.classList.remove("hidden");
+                bg.classList.add("block");
+                menu.classList.remove("hidden");
+                menu.classList.add("block");
+                body.classList.add("overflow-hidden");
+            }
+        }
     </script>
 
 

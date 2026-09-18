@@ -7,6 +7,10 @@
     font-display: swap;
 }
 
+button {
+    @apply cursor-pointer;
+}
+
 .container {
     width: min(100% - 8px, 2000px);
     margin-inline: auto;
