@@ -10,7 +10,6 @@
       "Courier New", monospace;
     --color-rose-500: oklch(64.5% 0.246 16.439);
     --color-rose-600: oklch(58.6% 0.253 17.585);
-    --color-zinc-100: oklch(96.7% 0.001 286.375);
     --color-zinc-200: oklch(92% 0.004 286.32);
     --color-zinc-300: oklch(87.1% 0.006 286.286);
     --color-black: #000;
@@ -464,13 +463,13 @@
 }
 .search-input {
   border-radius: var(--radius-sm);
-  background-color: var(--color-zinc-100);
+  background-color: var(--color-zinc-200);
   padding: var(--spacing);
   padding-inline: calc(var(--spacing) * 3);
   --tw-outline-style: none;
   outline-style: none;
   &:focus {
-    background-color: var(--color-zinc-200);
+    background-color: var(--color-zinc-300);
   }
   &:focus {
     --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
