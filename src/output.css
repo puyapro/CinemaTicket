@@ -8,6 +8,9 @@
       "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-500: oklch(63.7% 0.237 25.331);
+    --color-rose-500: oklch(64.5% 0.246 16.439);
+    --color-rose-600: oklch(58.6% 0.253 17.585);
     --color-zinc-100: oklch(96.7% 0.001 286.375);
     --color-zinc-200: oklch(92% 0.004 286.32);
     --color-zinc-300: oklch(87.1% 0.006 286.286);
@@ -232,8 +235,11 @@
   .hidden {
     display: none;
   }
-  .h-48 {
-    height: calc(var(--spacing) * 48);
+  .h-50 {
+    height: calc(var(--spacing) * 50);
+  }
+  .h-60 {
+    height: calc(var(--spacing) * 60);
   }
   .h-auto {
     height: auto;
@@ -290,14 +296,11 @@
   .border-b-zinc-300 {
     border-bottom-color: var(--color-zinc-300);
   }
-  .bg-black\/60 {
-    background-color: color-mix(in srgb, #000 60%, transparent);
+  .bg-black\/40 {
+    background-color: color-mix(in srgb, #000 40%, transparent);
     @supports (color: color-mix(in lab, red, red)) {
-      background-color: color-mix(in oklab, var(--color-black) 60%, transparent);
+      background-color: color-mix(in oklab, var(--color-black) 40%, transparent);
     }
-  }
-  .bg-white {
-    background-color: var(--color-white);
   }
   .bg-\[linear-gradient\(to_left\,rgba\(0\,0\,0\,\.9\)\,rgba\(0\,0\,0\,\.35\)_45\%\,transparent_80\%\)\] {
     background-image: linear-gradient(to left,rgba(0,0,0,.9),rgba(0,0,0,.35) 45%,transparent 80%);
@@ -343,6 +346,9 @@
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
   }
+  .whitespace-nowrap {
+    white-space: nowrap;
+  }
   .text-black {
     color: var(--color-black);
   }
@@ -361,13 +367,27 @@
       color: color-mix(in oklab, var(--color-white) 70%, transparent);
     }
   }
-  @media (width >= 40rem) {
-    .sm\:h-56 {
-      height: calc(var(--spacing) * 56);
+  .transition {
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  @media (hover: hover) {
+    .hover\:bg-black\/70:hover {
+      background-color: color-mix(in srgb, #000 70%, transparent);
     }
-    .sm\:text-base {
-      font-size: var(--text-base);
-      line-height: var(--tw-leading, var(--text-base--line-height));
+    @supports (color: color-mix(in lab, red, red)) {
+      .hover\:bg-black\/70:hover {
+        background-color: color-mix(in oklab, var(--color-black) 70%, transparent);
+      }
+    }
+  }
+  @media (width >= 40rem) {
+    .sm\:h-60 {
+      height: calc(var(--spacing) * 60);
+    }
+    .sm\:h-70 {
+      height: calc(var(--spacing) * 70);
     }
   }
   @media (width >= 48rem) {
@@ -380,8 +400,8 @@
     .md\:block {
       display: block;
     }
-    .md\:h-64 {
-      height: calc(var(--spacing) * 64);
+    .md\:h-80 {
+      height: calc(var(--spacing) * 80);
     }
     .md\:w-\[85\%\] {
       width: 85%;
@@ -421,11 +441,23 @@
   width: min(100% - 8px, 2000px);
   margin-inline: auto;
 }
+.transition {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
+  transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+  transition-duration: var(--tw-duration, var(--default-transition-duration));
+  --tw-duration: 200ms;
+  transition-duration: 200ms;
+  --tw-ease: var(--ease-out);
+  transition-timing-function: var(--ease-out);
+}
 .btn {
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: var(--spacing);
   border-radius: var(--radius-sm);
-  padding: calc(var(--spacing) * 2.5);
+  padding: calc(var(--spacing) * 2);
+  padding-inline: calc(var(--spacing) * 4);
   transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, --tw-gradient-from, --tw-gradient-via, --tw-gradient-to, opacity, box-shadow, transform, translate, scale, rotate, filter, -webkit-backdrop-filter, backdrop-filter, display, content-visibility, overlay, pointer-events;
   transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
   transition-duration: var(--tw-duration, var(--default-transition-duration));
@@ -499,6 +531,15 @@
   }
   @media (width >= 80rem) {
     grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+}
+.rose {
+  background-color: var(--color-rose-600) !important;
+  color: var(--color-white) !important;
+  &:hover {
+    @media (hover: hover) {
+      background-color: var(--color-rose-500) !important;
+    }
   }
 }
 .swiper-button-prev, .swiper-button-next {
