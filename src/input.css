@@ -13,7 +13,7 @@
 }
 
 .btn {
-    @apply flex gap-1 p-2 hover:bg-zinc-200 rounded-sm;
+    @apply flex gap-1 p-2.5 rounded-sm transition duration-200 ease-out hover:bg-zinc-200;
 }
 
 .search-input {

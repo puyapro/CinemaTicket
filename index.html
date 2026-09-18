@@ -12,17 +12,19 @@
 
 <body>
 
-    <header class="w-full scale-85 flex m-1 mt-2 justify-between items-center border-b-1 border-b-zinc-300">
-        <div class="flex p-1 justify-between gap-5">
-            <div class="gap-0 flex">
-                <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-10">
-                <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-33">
+    <header class="w-full pb-2 scale-85 flex m-1 mt-2 justify-between items-center border-b-1 border-b-zinc-300">
+        <div class="flex md:gap-15">
+            <div class="gap-0 flex w-screen justify-center md:w-auto h-auto">
+                <img src="https://cinematicket.org/assets/images/logo.svg" alt="logo icon" class="w-auto">
+                <img src="https://cinematicket.org/assets/images/typography_dark.svg" alt="logo" class="w-auto">
             </div>
-            <a href="#" class="!hidden md:!flex btn"><i data-lucide="popcorn"></i>
-                سینما ها
-            </a>
-            <input type="text" class="hidden lg:block search-input text-sm w-100"
-                placeholder="جست و جوی سینما، فیلم و...">
+            <div class="flex md:p-1 md:justify-between md:gap-5">
+                <a href="#" class="!hidden md:!flex btn "><i data-lucide="popcorn"></i>
+                    سینما ها
+                </a>
+                <input type="text" class="hidden lg:block search-input text-sm w-100"
+                    placeholder="جست و جوی سینما، فیلم و...">
+            </div>
         </div>
         <div class="">
             <a href="#" class="!hidden md:!flex btn"><i data-lucide="circle-user-round"></i>
