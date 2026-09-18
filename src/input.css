@@ -21,7 +21,7 @@
 }
 
 .section {
-    @apply my-2 mt-7 scale-85
+    @apply my-2 -mt-8 md:mt-7 scale-85
 }
 
 .section h3 {
